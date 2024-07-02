@@ -117,3 +117,19 @@ body{
 .carrucel span:hover img{
     transform: translateY(-50px) scale(1.2);
 }
+.buttons{
+    min-width: 700p;
+    display: flex;
+    justify-content: space-around;
+}
+.buttons a{
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: aqua;
+    color: aliceblue;
+    border-radius: 50%;
+}
