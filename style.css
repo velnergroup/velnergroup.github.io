@@ -129,14 +129,14 @@ body{
 
 .buttons a {
   text-decoration: none;
-  font-size: 28px;
+  font-size: 18px;
   width: 30px;
   height: 30px;
   line-height: 30px;
   text-align: center;
   background: #dimgray;
   color: #f1f1f1;
-  border-radius: 40%;
+  border-radius: 50%;
   box-shadow: 2px 5px 5px rgba(0, 0, 0, .5);
   transition: all .4s ease-in-out;
 }
