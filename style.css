@@ -10,7 +10,7 @@ body{
     color: #000;
     margin: 0;
     padding: 0;
-     background-image: radial-gradient( circle 500px at 10.2% 22.1%,  rgba(11,218,81,1) 0%, rgba(0,191,255,1) 90% );
+     background-image: radial-gradient( circle 250px at 10.2% 22.1%,  rgba(11,218,81,1) 0%, rgba(0,191,255,1) 90% );
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -138,7 +138,7 @@ body{
   background: #314652;
   color: #f1f1f1;
   border-radius: 50%;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, .5);
   transition: all .4s ease-in-out;
 }
 
