@@ -60,47 +60,60 @@ body{
     font-size: 14px;
     color: #c4c4c4;   
 }
-.product-i{
-    flex-basis: 50%;
-    text-align: right;
-    text-align: center;
-}
 .product-i img{
-    width: 120px;
+    width: 100px;
 }
 .btn-1{
     display: inlie-block;
-    padding: 15px 55px;
+    padding: 15px 25px;
     border: 1px solid #FFB900;
     border-radius: 50px;
     color: #FFB900;
     text-decoration: none;
-    margin-top: 100px;
+    margin-top: 50px;
 }
-* {
-    margin: 0;
+
+*{
+    margin: o;
     padding: 0;
-    box-sizing: content-box;
-  }
-  .buttons {
-    min-width: 100px;
-    display: flex;
-  }
-  
-  .buttons a {
-    text-decoration: none;
-    font-size: 28px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    background: #314652;
-    color: #f1f1f1;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-    transition: all .4s ease-in-out;
-  }
-  
-  .buttons a:hover {
-    transform: scale(1.2);
-  }
+    box-sizing: border-box;
+}
+.carrucel{
+    position: relative;
+    left: 85px;
+    width: 50px;
+    height: 50px;
+    transform-style:preserve-3d ;
+    animation: rotate 30s linear infinite ;
+}
+@keyframes rotate {
+    0%{
+        transform: perspective(500px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(500px) rotateY(360deg);
+    }
+}
+.carrucel span{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform-origin:center ;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg))translateZ(50px);
+}
+.carrucel span img{
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+}
+.carrucel span:hover img{
+    transform: translateY(-50px) scale(1.2);
+}
