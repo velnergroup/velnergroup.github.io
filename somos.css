@@ -1,4 +1,4 @@
-* {
+*{
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -6,46 +6,41 @@
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    overflow: hidden; /* Evitar el scroll */
-}
-
-nav {
+nav{
     background: #2fcdcd;
     height: 80px;
     width: 100%;
     position: relative;
     z-index: 2;
 }
-.enlace {
+.enlace{
     position: absolute;
     padding: 10px 50px;
 }
-.logo {
+.logo{
     height: 60px;
 }
-nav ul {
+nav ul{
     float: right;
     margin-right: 20px;
 }
-nav ul li {
+nav ul li{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
 }
-nav ul li a {
+nav ul li a{
     color: #fff;
     font-size: 18px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
 }
-li a.active, li a:hover {
+li a.active, li a:hover{
     background: #000090;
     transition: .5s;
 }
-.checkbtn {
+.checkbtn{
     font-size: 30px;
     color: #fff;
     float: right;
@@ -54,16 +49,14 @@ li a.active, li a:hover {
     cursor: pointer;
     display: none;
 }
-#check {
+#check{
     display: none;
 }
-section {
-    position: relative;
+section{
+    background: url(Fondo.mp4);
+    background-size: cover;
+    background-position: center center;
     height: calc(100vh - 80px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Evitar scroll interno */
 }
 .texto {
     position: relative;
@@ -73,8 +66,7 @@ section {
     max-width: 800px; /* Máximo ancho para el contenedor */
     margin: 0 auto; /* Centrar el contenedor horizontalmente */
     text-align: left;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para legibilidad */
+    padding: 100px;
     overflow-y: auto; /* Habilitar scroll interno si es necesario */
     max-height: 100%; /* Limitar la altura máxima */
 }
@@ -86,7 +78,7 @@ section {
     font-size: 1rem;
     color: #f3f3f3;
 }
-video {
+video{
     position: absolute;
     top: 0;
     left: 0;
@@ -94,7 +86,7 @@ video {
     height: 100%;
     object-fit: cover;
 }
-.capa {
+.capa{
     position: absolute;
     top: 0;
     left: 0;
@@ -104,20 +96,21 @@ video {
     opacity: 0.5;
     mix-blend-mode: overlay;
 }
-@media (max-width: 952px) {
-    .enlace {
+
+@media (max-width: 952px){
+    .enlace{
         padding-left: 20px;
     }
-    nav ul li a {
+    nav ul li a{
         font-size: 16px;
     }
 }
 
-@media (max-width: 858px) {
-    .checkbtn {
+@media (max-width: 858px){
+    .checkbtn{
         display: block;
     }
-    ul {
+    ul{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -127,19 +120,19 @@ video {
         text-align: center;
         transition: all .5s;
     }
-    nav ul li {
+    nav ul li{
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    nav ul li a {
+    nav ul li a{
         font-size: 20px;
     }
-    li a:hover, li a.active {
+    li a:hover, li a.active{
         background: none;
         color: red;
     }
-    #check:checked ~ ul {
-        left: 0;
+    #check:checked ~ ul{
+        left:0;
     }
 }
