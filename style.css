@@ -33,7 +33,7 @@ body{
     align-items: center;
     margin-bottom: 40px;
 }
-.icons i{
+.icons a{
     font-size: 20px;
     color: #FFB900;
 }
