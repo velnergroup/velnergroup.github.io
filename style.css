@@ -69,12 +69,12 @@ body{
 }
 .btn-1{
     display: inlie-block;
-    padding: 15px 25px;
+    padding: 5px 3px;
     border: 1px solid #FFB900;
-    border-radius: 50px;
+    border-radius: 10px;
     color: #FFB900;
     text-decoration: none;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 *{
@@ -122,7 +122,7 @@ body{
     transform: translateY(-50px) scale(1.2);
 }
 .buttons {
-  min-width: 100px;
+  min-width: 80px;
   display: flex;
   justify-content: 10px;
 }
