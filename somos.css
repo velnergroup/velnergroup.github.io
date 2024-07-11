@@ -60,7 +60,7 @@ section{
 }
 .texto {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     color: #fff;
     width: 60%; /* Ajusta el tamaño según sea necesario */
     max-width: 800px; /* Máximo ancho para el contenedor */
