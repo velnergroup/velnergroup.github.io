@@ -7,7 +7,7 @@
 }
 
 nav{
-    background: #2fcdcd;
+    background: #323232;
     height: 80px;
     width: 100%;
     position: relative;
@@ -58,23 +58,26 @@ section{
     background-position: center center;
     height: calc(100vh - 80px);
 }
-.texto{
+.texto {
     position: relative;
     z-index: 2;
-    color: #fff; /* Justificar el texto a la izquierda */
+    color: #fff;
     width: 60%; /* Ajusta el tamaño según sea necesario */
     max-width: 800px; /* Máximo ancho para el contenedor */
     margin: 0 auto; /* Centrar el contenedor horizontalmente */
-    margin-top: 80px;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para legibilidad */
+    overflow-y: auto; /* Habilitar scroll interno si es necesario */
+    max-height: 100%; /* Limitar la altura máxima */
 }
-.texto h1{
+.texto h1 {
     font-size: 1.5rem;
     color: #f3f3f3;
 }
-.texto p{
+.texto p {
     font-size: 1rem;
     color: #f3f3f3;
-    text-align: left;
 }
 video{
     position: absolute;
@@ -94,6 +97,7 @@ video{
     opacity: 0.5;
     mix-blend-mode: overlay;
 }
+
 @media (max-width: 952px){
     .enlace{
         padding-left: 20px;
