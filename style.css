@@ -43,7 +43,7 @@ body{
 }
 
 .heart-checkbox input[type="checkbox"]:checked + i {
-    color: red; /* Color del corazón cuando está seleccionado */
+    color: #FFB900; /* Color del corazón cuando está seleccionado */
 }
 .icons{
     display: flex;
@@ -66,14 +66,7 @@ body{
 }
 .product-txt{
     flex-basis: 50%;
-    text-align: left;
-}
-.product-text span{
-    font-family: 'Teko', sans-serif;
-	margin: 0;
-	font-size: 30px;
-    color: #FFB900;
-	text-shadow: 0 0 5px rgb(79, 117, 61), 0 0 15px rgb(159, 245, 22), 0 0 30px rgb(226, 11, 11), 0 0 50px rgb(241, 150, 108);
+    text-align: center;
 }
 .product-text h3{
     font-size: 20px;
@@ -81,8 +74,10 @@ body{
     text-transform: uppercase;
 }
 .product-text p{
-    font-size: 14px;
-    color: #c4c4c4;   
+    font-size: 3px;
+    color: #c4c4c4;
+        font-size: .9vw; /* Tamaño de fuente relativo al ancho de la ventana */
+        color: #f3f3f3;   
 }
 .product-i img{
     width: 100px;
