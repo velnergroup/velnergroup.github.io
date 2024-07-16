@@ -74,14 +74,13 @@ body{
     text-transform: uppercase;
 }
 .product-text p{
-    font-size: 3px;
-    color: #c4c4c4;
-        font-size: .9vw; /* Tamaño de fuente relativo al ancho de la ventana */
-        color: #f3f3f3;   
+    font-size: 12px;
+    color: #f3f3f3;   
 }
 .product-i img{
     width: 100px;
 }
+
 .btn-1{
     display: inlie-block;
     padding: 15px 25px;
