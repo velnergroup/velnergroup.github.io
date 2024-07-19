@@ -148,7 +148,7 @@ body{
   height: 30px;
   line-height: 30px;
   text-align: center;
-  background: #dimgray;
+  background: dimgray;
   color: #f1f1f1;
   border-radius: 50%;
   box-shadow: 2px 5px 5px rgba(0, 0, 0, .5);
