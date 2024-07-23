@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -6,80 +6,109 @@
     box-sizing: border-box;
 }
 
-nav{
+nav {
     background: #323232;
     height: 80px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; /* Ajusta según sea necesario */
     position: relative;
     z-index: 2;
 }
-.enlace{
-    position: absolute;
-    padding: 10px 50px;
+
+.enlace {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Ajusta el padding según sea necesario */
+    margin-left: 1px;
 }
-.logo{
+
+.logo {
     height: 60px;
 }
-nav ul{
-    float: right;
-    margin-right: 20px;
+
+.mid-text {
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-left: 20px; /* Ajusta según sea necesario */
+    margin-right: auto; /* Empuja el menú a la derecha */
+    text-align: center;
 }
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    margin-left: auto;
 }
-nav ul li a{
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
     color: #fff;
     font-size: 18px;
-    padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
 }
-li a.active, li a:hover{
+
+li a.active, li a:hover {
     background: #000090;
     transition: .5s;
 }
-.checkbtn{
-    font-size: 30px;
-    color: #fff;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
+
+#check {
     display: none;
 }
-#check{
-    display: none;
-}
-section{
+
+section {
+    position: relative;
     background: url(Fondo.mp4);
     background-size: cover;
     background-position: center center;
     height: calc(100vh - 80px);
+    overflow: hidden; /* Evita el scroll */
 }
+
 .texto {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     color: #fff;
-    width: 60%; /* Ajusta el tamaño según sea necesario */
+    width: 80vw; /* Ajusta el tamaño según sea necesario */
     max-width: 800px; /* Máximo ancho para el contenedor */
     margin: 0 auto; /* Centrar el contenedor horizontalmente */
     text-align: left;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para legibilidad */
-    overflow-y: auto; /* Habilitar scroll interno si es necesario */
-    max-height: 100%; /* Limitar la altura máxima */
+    padding: 20px;/* Fondo semi-transparente para legibilidad */
+    height: 100%; /* Asegura que ocupe toda la altura disponible */
 }
+
 .texto h1 {
-    font-size: 1.5rem;
+    font-size: 2vw; /* Tamaño de fuente relativo al ancho de la ventana */
     color: #f3f3f3;
 }
+
 .texto p {
-    font-size: 1rem;
+    font-size: 1.5vw; /* Tamaño de fuente relativo al ancho de la ventana */
     color: #f3f3f3;
 }
-video{
+
+video {
     position: absolute;
     top: 0;
     left: 0;
@@ -87,7 +116,8 @@ video{
     height: 100%;
     object-fit: cover;
 }
-.capa{
+
+.capa {
     position: absolute;
     top: 0;
     left: 0;
@@ -98,42 +128,80 @@ video{
     mix-blend-mode: overlay;
 }
 
-@media (max-width: 952px){
-    .enlace{
-        padding-left: 20px;
+@media (max-width: 952px) {
+    .enlace {
+        padding-left: 10px;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-size: 16px;
+    }
+
+    .mid-text {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    .texto h1 {
+        font-size: 4vw; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    .texto p {
+        font-size: 3vw; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
     }
 }
 
-@media (max-width: 858px){
-    .checkbtn{
-        display: block;
+@media (max-width: 858px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
     }
-    ul{
+
+    .enlace {
+        order: 1;
+    }
+
+    .mid-text {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .checkbtn {
+        order: 3;
+        margin-left: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
         position: fixed;
         width: 100%;
         height: 100vh;
         background: #2c3e50;
         top: 80px;
         left: -100%;
-        text-align: center;
         transition: all .5s;
     }
-    nav ul li{
-        display: block;
+
+    nav ul li {
         margin: 50px 0;
         line-height: 30px;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-size: 20px;
     }
-    li a:hover, li a.active{
+
+    li a:hover, li a.active {
         background: none;
         color: red;
     }
-    #check:checked ~ ul{
-        left:0;
+
+    #check:checked ~ ul {
+        left: 0;
     }
 }
