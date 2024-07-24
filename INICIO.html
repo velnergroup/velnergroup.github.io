@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/logo.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velner Group</title>
+    <link rel="icon" href="images/logo.ico">
+    <link rel="stylesheet" href="intento.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="images/logo.jpeg" alt="" class="logo">
+        </a>
+        <div class="mid-text">SEGURIDAD Y PROTECCIÓN A TU MEDIDA</div>
+        <ul>
+            <li><a class="active" href="INICIO.html">Inicio</a></li>
+            <li><a href="Contactanos.html">Contáctanos</a></li>
+            <li><a href="Quienes.html">Quienes somos</a></li>
+            <li><a href="MENU.html">Catálogo</a></li>
+        </ul>
+    </nav>
+    
+    <section>
+          <div class="capa"><video muted autoplay loop>
+            <source src="fondos/operadorr.mp4" type="video/mp4">
+          </video></div>
+        <div class="search-bar">
+            <input list="pageNames" id="pageInput" placeholder="Buscar..." oninput="navigateToPage()">
+            <datalist id="pageNames">
+                <option value="Mascarillas"></option>
+                <option value="Guantes"></option>
+                <option value="Cabezales"></option>
+                <option value="Bandolas"></option>
+                <option value="Lentes"></option>
+                <option value="Señalamientos"></option>
+                <option value="Jarcería y Limpieza"></option>
+            </datalist>
+        </div>
+        
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <p>contacto:Av.villa escondida 12,Col.Villas de cuautitlán,C.P.54857,CUAUTITLÁN
+            </p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/VELNERGROUP" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/message/KIJDZKC2ZKSPD1" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const pages = [
+            { name: "Mascarillas", url: "MASCARILLAS.html" },
+            { name: "Guantes", url: "GUANTES.html" },
+            { name: "Cabezales", url: "CABEZALES.html" },
+            { name: "Bandolas", url: "BANDOLAS.html" },
+            { name: "Lentes", url: "LENTES.html" },
+            { name: "Señalamientos", url: "SEÑALAMIENTOS.html" },
+            { name: "Jarcería y Limpieza", url: "JARCIERIA.html" }
+        ];
+    
+        function navigateToPage() {
+            const input = document.getElementById('pageInput').value;
+            const page = pages.find(p => p.name.toLowerCase() === input.toLowerCase());
+    
+            if (page) {
+                window.location.href = page.url;
+            }
+        }
+    </script>  
+</body>
+</html>
