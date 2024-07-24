@@ -10,7 +10,6 @@
     src: url('path-to-your-fonts/HelveticaNeue.woff2') format('woff2'),
          url('path-to-your-fonts/HelveticaNeue.woff') format('woff');
 }
-
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
