@@ -16,13 +16,14 @@ body {
 }
 
 nav {
+    font-family: Helvetica Neue, Helvetica;
     background: #323232;
-    height: 80px;
+    height: 50px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px; /* Ajusta según sea necesario */
+    padding: 0 15px; /* Ajusta según sea necesario */
     position: relative;
     z-index: 2;
 }
@@ -35,7 +36,7 @@ nav {
 }
 
 .logo {
-    height: 60px;
+    height: 50px;
 }
 
 .mid-text {
@@ -280,3 +281,61 @@ input, textarea {
 .btn:hover {
     background-color: #219BF9;
 }
+footer {
+    background-color: #323232;
+    color: #fff;
+    padding: 2px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Asegura que no haya overflow */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row; /* Alinea los elementos en fila */
+    align-items: center;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
+}
+
+.footer-content p {
+    margin: 0 10px; /* Añade margen entre la ubicación y los iconos */
+    font-size: 14px;
+    flex-shrink: 0; /* Evita que el texto se encoja */
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 0; /* Elimina el margen superior */
+    margin-left: 10px; /* Añade margen entre el texto y los iconos */
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #000090;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-content p, .social-icons {
+        margin: 5px 0;
+    }
+    
+    .social-icon {
+        margin: 5px;
+        font-size: 18px;
+    }
+}
+
