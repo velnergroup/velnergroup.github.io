@@ -34,5 +34,36 @@
           </video>
           <div class="capa"></div>
     </section>
+    <footer>
+        <div class="footer-content">
+            <p>contacto:Av.villa escondida 12,Col.Villas de cuautitlán,C.P.54857,CUAUTITLÁN
+            </p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/VELNERGROUP" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/message/KIJDZKC2ZKSPD1" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const pages = [
+            { name: "Mascarillas", url: "MASCARILLAS.html" },
+            { name: "Guantes", url: "GUANTES.html" },
+            { name: "Cabezales", url: "CABEZALES.html" },
+            { name: "Bandolas", url: "BANDOLAS.html" },
+            { name: "Lentes", url: "LENTES.html" },
+            { name: "Señalamientos", url: "SEÑALAMIENTOS.html" },
+            { name: "Jarcería y Limpieza", url: "JARCIERIA.html" }
+        ];
+    
+        function navigateToPage() {
+            const input = document.getElementById('pageInput').value;
+            const page = pages.find(p => p.name.toLowerCase() === input.toLowerCase());
+    
+            if (page) {
+                window.location.href = page.url;
+            }
+        }
+    </script>
 </body>
 </html>
