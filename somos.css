@@ -267,24 +267,24 @@ footer {
 }
 .search-bar {
     position: relative;
-    top:30px;
+    
     z-index: 1;
     margin-left: 100px; /* Para empujar la barra de búsqueda a la derecha */
     margin-right: 200px; /* Ajusta el margen según sea necesario */
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
 .search-bar input {
     padding: 10px 15px;
     font-size: 16px;
-    border-radius: 20px; /* Hace que los bordes sean redondeados */
-    border: 1px solid #ccc; /* Color del borde */
-    width: 350px; /* Ajusta el ancho según sea necesario */
-    outline: none; /* Remueve el borde azul en foco */
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 350px;
+    outline: none;
     transition: border-color 0.3s;
 }
-
 .search-bar input:focus {
     border-color: #000090; /* Color del borde cuando está enfocado */
 }
@@ -301,29 +301,59 @@ section {
     align-items: center; /* Centra verticalmente el contenido */
 }
 
-.search-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .search-bar h3 {
-    font-size: 1.5vw; /* Tamaño de fuente relativo al ancho de la ventana */
-    color: #FFFF00;
+    font-size: 2.5vw;
+    color: #f17713;
     text-align: center;
-    margin-bottom: 20px; /* Espacio entre el texto y la barra de búsqueda */
+    margin-bottom: 10px; /* Reduce el espacio entre el texto y la barra de búsqueda */
 }
 
-.search-bar input {
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    width: 350px;
-    outline: none;
-    transition: border-color 0.3s;
+
+.carousel {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.search-bar input:focus {
-    border-color: #000090;
+.carousel-content {
+    display: flex;
+    width: 100%;
+    animation: scroll 30s linear infinite;
+}
+
+.carousel img {
+    width: 200px;
+    margin-right: 10px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-content p {
+        margin: 10px 0;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icon {
+        font-size: 16px; /* Reduce el tamaño para iconos más pequeños */
+    }
 }
