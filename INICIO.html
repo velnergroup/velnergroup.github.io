@@ -29,9 +29,11 @@
     </nav>
     
     <section>
-          <div class="capa"><video muted autoplay loop>
+          <div class="capa">
+            <video muted autoplay loop>
             <source src="fondos/operadorr.mp4" type="video/mp4">
-          </video></div>
+          </video>
+        </div>
         <div class="search-bar">
             <h3>"Encuentra el equipo de seguridad perfecto para tus necesidades: cascos, guantes y más, todo en un solo lugar."</h3>
             <input list="pageNames" id="pageInput" placeholder="Buscar..." oninput="navigateToPage()">
@@ -45,7 +47,28 @@
                 <option value="Jarcería y Limpieza"></option>
             </datalist>
         </div>
-        
+        <div class="carousel">
+            <div class="carousel-content">
+                <img src="fondo/1.jpeg">
+                <img src="fondo/1.png">
+                <img src="fondo/2.png">
+                <img src="fondo/3.png">
+                <img src="fondo/4.png">
+                <img src="fondo/5.png">
+                <img src="fondo/6.png">
+                <img src="fondo/7.png">
+                <img src="fondo/8.png">
+                <img src="fondo/9.png">
+                <img src="fondo/10.png">
+                <img src="fondo/11.png">
+                <img src="fondo/12.png">
+                <img src="fondo/13.png">
+                <img src="fondo/14.png">
+                <img src="fondo/15.png">
+
+                <!-- Repeat as necessary -->
+            </div>
+        </div>
     </section>
     
     <footer>
@@ -78,6 +101,25 @@
                 window.location.href = page.url;
             }
         }
+        document.addEventListener("DOMContentLoaded", function() {
+    const carouselContent = document.querySelector(".carousel-content");
+    const images = document.querySelectorAll(".carousel-content img");
+    
+    let totalWidth = 0;
+    images.forEach(image => {
+        totalWidth += image.offsetWidth;
+    });
+
+    // Ajustar el ancho del contenedor para permitir el desplazamiento infinito
+    carouselContent.style.width = `${totalWidth * 2}px`;
+
+    // Clonar las imágenes y agregarlas al final del contenedor
+    images.forEach(image => {
+        const clone = image.cloneNode();
+        carouselContent.appendChild(clone);
+    });
+});
+
     </script>  
 </body>
 </html>
