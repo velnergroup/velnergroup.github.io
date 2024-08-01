@@ -126,8 +126,8 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #c7c40d;
-    opacity: 0.9;
+    background: #010df2;
+    opacity: 0.5;
     mix-blend-mode: overlay;
 }
 
@@ -303,8 +303,9 @@ section {
 
 
 .search-bar h3 {
-    font-size: 2.5vw;
-    color: #f17713;
+    font-size: 3vw;
+    color: #ffffff;
+    text-shadow: 2px 3px 0 #a9136d;
     text-align: center;
     margin-bottom: 10px; /* Reduce el espacio entre el texto y la barra de búsqueda */
 }
@@ -324,7 +325,7 @@ section {
 
 .carousel img {
     width: 200px;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 @keyframes scroll {
